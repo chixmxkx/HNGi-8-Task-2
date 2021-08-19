@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
         $body = "You have received a message from " .$name. ".\n\n" .$message;
 
         mail($me, $subject, $body, $headers);
-        header("Location: index.html");
+        header('Location: index.html');
     }
 
 }
