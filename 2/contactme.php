@@ -2,7 +2,7 @@
 
 if(isset($_POST['submit'])){
 
-    if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
         $name = $_POST['name'];
         $email = $_POST['email'];
         $subject = $_POST['subject'];
