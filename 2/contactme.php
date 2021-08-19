@@ -8,14 +8,18 @@ if(isset($_POST['submit'])){
         $subject = $_POST['subject'];
         $message = $_POST['message'];
 
+        $from = "chiamakaessonna@gmail.com";
+
         $me = "beautifulessonna@gmail.com";
         $headers = "From: " .$email;
         $body = "You have received a message from " .$name. ".\n\n" .$message;
 
         mail($me, $subject, $body, $headers);
-        header('Location: index.html');
+        header("Location: index.php?messagesent");
     }
-
+    else{
+        header("Location: index.php");
+    }
 }
 
 ?>
